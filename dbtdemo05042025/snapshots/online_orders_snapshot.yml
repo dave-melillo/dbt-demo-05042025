@@ -1,0 +1,8 @@
+snapshots:
+  - name: online_orders_snapshot
+    config:
+      strategy: check
+      unique_key: order_number
+      check_cols: ["status"]
+      target_schema: "{{ target.schema }}" 
+    relation: ref('stg_online_orders')

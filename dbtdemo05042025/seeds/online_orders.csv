@@ -1,0 +1,11 @@
+order_number,customer,item,timestamp_of_purchase,status
+1001,dc634429-12c2-417d-b460-f3ed4903d539,"Toaster",2024-01-01 08:00:00,delivered
+1002,2bdeb3b7-a894-4fcf-8218-e41167bc557e,"Blender",2024-01-01 09:00:00,processing
+1003,84f816bd-12e2-4633-a419-fc80705977e6,"Microwave",2024-01-01 09:30:00,shipped
+1004,0bb6fcf3-0741-4179-af46-d26c45b77171,"Coffee Maker",2024-01-01 10:00:00,processing
+1005,827eed18-8ab1-4e5d-ab00-5d8ac9bb168b,"Slow Cooker",2024-01-01 10:30:00,processing
+1006,9db0e79f-fdea-4290-ba7b-114141f33d1f,"Toaster Oven",2024-01-01 11:00:00,shipped
+1007,2a2c365a-ac9d-4106-a494-678e09ae412c,"Air Fryer",2024-01-01 11:30:00,processing
+1008,dc634429-12c2-417d-b460-f3ed4903d539,"Juicer",2024-01-01 12:00:00,processing
+1009,84f816bd-12e2-4633-a419-fc80705977e6,"Food Processor",2024-01-01 12:30:00,processing
+1010,827eed18-8ab1-4e5d-ab00-5d8ac9bb168b,"Rice Cooker",2024-01-01 13:00:00,processing

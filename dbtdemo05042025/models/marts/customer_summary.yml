@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: customer_summary
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+          - customer_id_positive:
+              severity: warn
+      - name: total_revenue
+        tests:
+          - not_null
+          - not_zero
+          - revenue_not_negative:
+              severity: warn
+      - name: email
+        tests:
+          - email_format_check:
+              severity: warn

@@ -1,0 +1,67 @@
+version: 2
+
+sources:
+  # ─── existing retail source ─────────────────────────────────────────────
+  - name: retail
+    database: DBT_DEMO_05042026
+    schema: PUBLIC
+    tables:
+      - name: retail_transactions
+        description: |
+          Raw CSV upload containing messy retail transactions used for lesson demos.
+
+  # ─── pagila source ──────────────────────────────────────────────────────
+  - name: pagila
+    database: DBT_DEMO_05042026
+    schema: PAGILA
+
+    tables:
+      # dimension tables
+      - name: actor
+        description: Master list of actors in the Pagila movie rental universe.
+
+      - name: customer
+        description: Customers who rent films.
+        columns:
+          - name: customer_id
+            tests:
+              - not_null
+              - unique
+
+      - name: address
+        description: Physical addresses for customers, stores and staff.
+
+      - name: city
+        description: Cities referenced by addresses.
+
+      - name: country
+        description: Countries referenced by cities.
+
+      - name: store
+        description: Physical rental stores.
+
+      - name: staff
+        description: Staff working in stores (useful for staff → rental joins).
+
+      # fact / bridge tables
+      - name: film
+        identifier: FILM
+        description: Core film catalogue with pricing and length metadata.
+
+      - name: film_actor
+        description: Bridge table mapping films to actors (many-to-many).
+
+      - name: film_category
+        description: Bridge table mapping films to genres.
+
+      - name: inventory
+        description: Physical copies of each film held at a store.
+
+      - name: rental
+        description: Each time a customer rents an inventory item.
+
+      - name: payment
+        description: Payments associated with a rental.
+      - name: language
+      - name: category
+

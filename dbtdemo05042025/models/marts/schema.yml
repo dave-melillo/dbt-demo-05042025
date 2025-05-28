@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: fct_revenue_by_film
+    description: "{{ doc('fct_revenue_by_film_doc') }}"
+    columns:
+      - name: film_id
+        description: Film identifier
+      - name: film_title
+        description: Human-readable title of the film
+      - name: payment_day
+        description: Day of payment (truncated from payment_date)
+      - name: revenue
+        description: Total revenue per film per day

@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: actor
+    columns:
+      - name: actor_id
+        tests:
+          - not_null
+          - unique
+
+  - name: language
+    columns:
+      - name: language_id
+        tests:
+          - not_null
+          - unique
+
+  - name: store
+    columns:
+      - name: store_id
+        tests:
+          - not_null
+          - unique
+          - store_id_range:
+              severity: warn

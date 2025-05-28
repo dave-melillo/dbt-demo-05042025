@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: marvel
+    schema: "{{ target.schema }}" 
+    tables:
+      - name: marvel_wikia_data
+        description: marvel characters
+
+  
