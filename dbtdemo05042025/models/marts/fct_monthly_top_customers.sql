@@ -18,4 +18,4 @@ FROM (
         ROW_NUMBER() OVER (PARTITION BY month ORDER BY total_spent DESC) AS rn
     FROM monthly
 )
-WHERE rn <= 10;
+WHERE rn <= 10

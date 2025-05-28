@@ -62,6 +62,11 @@ sources:
 
       - name: payment
         description: Payments associated with a rental.
+        loaded_at_field: payment_date
+        freshness: 
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 10000, period: day}
+
       - name: language
       - name: category
 

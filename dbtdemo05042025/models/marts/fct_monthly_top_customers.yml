@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: fct_monthly_top_customers
+    description: Top-spending customers per month

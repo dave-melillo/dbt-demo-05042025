@@ -1,0 +1,15 @@
+version: 2
+
+models: 
+  - name: stg_films
+    description: Cleaned film data from the raw pagila.film source. 
+    columns: 
+      - name: film_id
+        description: Unique identifier for each file. 
+      - name: title
+        description: The film's title 
+  - name: stg_rentals
+    description: rental and return dates by customer, store and film - no revenue or payment information 
+    columns: 
+      - name: rental_date
+        description: the date the dvd was rented 
