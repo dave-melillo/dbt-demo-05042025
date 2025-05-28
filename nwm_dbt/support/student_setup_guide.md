@@ -21,6 +21,12 @@ cd dbtdemo05042025 --this is the actual dbt project folde
 python3 -m venv venv --optional
 source venv/bin/activate --optional
 pip install dbt-core dbt-snowflake
+
+cd dbt-demo-05042025
+cd dbtdemo05042025 
+dbt init dbtdemo05042025 --this generates project scaffolding, profiles.yml ++
+```
+dbt init <project_name>:
 ```
 
 ---
