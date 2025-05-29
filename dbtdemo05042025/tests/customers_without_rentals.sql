@@ -1,3 +1,9 @@
+{{ config(
+    store_failures = true,
+    severity = 'error',
+    fail_calc = 'count(*)'
+) }}
+
 -- This test fails if any customers exist that have no rental records
 SELECT
   c.customer_id,

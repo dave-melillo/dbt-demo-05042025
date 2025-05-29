@@ -1,9 +1,9 @@
 snapshots:
   - name: marvel_short_snapshot
-    description: Tracks alignment changes (hero ↔ villain)
+    description: Tracks alignment and identity status changes
     config:
       strategy: check
       unique_key: name
-      check_cols: ["align"]
-      target_schema: "{{ target.schema }}" 
+      check_cols: ["align", "id"]
+      target_schema: "{{ target.schema }}"
     relation: ref('stg_marvel_short')

@@ -1,4 +1,4 @@
 -- models/core/language.sql
-{{ config(materialized='view') }}
+{{ config(materialized='view', tags=['jinjalab']) }}
 
 SELECT * FROM {{ source('pagila', 'store') }}
