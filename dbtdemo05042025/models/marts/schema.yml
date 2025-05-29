@@ -12,3 +12,6 @@ models:
         description: Day of payment (truncated from payment_date)
       - name: revenue
         description: Total revenue per film per day
+        
+  - name: fct_monthly_top_customers
+    description: "{{ doc('fct_monthly_top_customers') }}"

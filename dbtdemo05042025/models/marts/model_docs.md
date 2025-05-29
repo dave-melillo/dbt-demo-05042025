@@ -6,3 +6,11 @@ This model calculates **daily revenue per film** by joining:
 
 Used in: revenue dashboard, monthly film reports.
 {% enddocs %}
+
+{% docs fct_monthly_top_customers %}
+This model calculates **monthly top customers** by joining:
+
+- `x` for rental and film-level info
+- `y` for payment amounts
+
+{% enddocs %}

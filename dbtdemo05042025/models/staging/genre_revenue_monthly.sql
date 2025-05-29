@@ -3,7 +3,9 @@
     tags = ['section_2_tests']
 ) }}
 
-{% set genre = 'Animation' %}
+{% set genres = ['Action', 'Animation', 'Children', 'Classics', 'Comedy', 'Documentary', 'Drama', 'Family', 'Foreign', 'Games'] %}
+
+{% for genre in genres %}
 
 SELECT
     '{{ genre }}' AS genre,
@@ -16,5 +18,11 @@ JOIN {{ source('pagila', 'inventory') }} AS i ON r.inventory_id = i.inventory_id
 JOIN {{ source('pagila', 'film') }} AS f ON i.film_id = f.film_id
 JOIN {{ source('pagila', 'film_category') }} AS fc ON f.film_id = fc.film_id
 JOIN {{ source('pagila', 'category') }} AS c ON fc.category_id = c.category_id
-WHERE {{ get_genre_filter(genre) }}
+WHERE c.name = '{{ genre }}'
 GROUP BY 1, 2
+
+{% if not loop.last %}
+UNION ALL
+{% endif %}
+
+{% endfor %}
